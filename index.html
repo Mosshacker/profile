@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDIT: Change this to your name -->
+    <title>Your Name</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --border: #2a2a2a;
+            --text: #f5f0e8;
+            --muted: #8a8578;
+            --accent: #d4a843;
+            --accent-dim: #b8922e;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 4rem 1.5rem;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container { max-width: 620px; width: 100%; }
+
+        .avatar {
+            width: 96px; height: 96px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            border: 2px solid var(--accent-dim);
+            margin-bottom: 1.5rem;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.4rem;
+            animation: fadeUp 0.6s ease 0.1s both;
+        }
+
+        .tagline {
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            animation: fadeUp 0.6s ease 0.2s both;
+        }
+
+        .section { margin-bottom: 2.5rem; }
+
+        .section h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.2rem 1.4rem;
+            margin-bottom: 0.75rem;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .card:hover {
+            border-color: var(--accent-dim);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(212, 168, 67, 0.06);
+        }
+
+        .card h3 {
+            color: #f5f0e8;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.3s; }
+        .card:nth-child(2) { animation-delay: 0.45s; }
+        .card:nth-child(3) { animation-delay: 0.6s; }
+
+        .badge {
+            display: inline-block;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin: 0 0.4rem 0.4rem 0;
+            transition: border-color 0.3s ease, background 0.3s ease;
+            animation: fadeIn 0.5s ease both;
+        }
+
+        .badge:hover {
+            border-color: var(--accent);
+            background: rgba(212, 168, 67, 0.08);
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-right: 1.5rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .links a:hover { opacity: 0.7; }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+            margin: 2rem 0;
+            animation: fadeIn 0.8s ease 0.5s both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- EDIT: Change the emoji to whatever you like -->
+        <div class="avatar">🧬</div>
+
+        <!-- EDIT: Your name -->
+        <h1>Your Name</h1>
+
+        <!-- EDIT: One-line description. Separate topics with · -->
+        <p class="tagline">High schooler · Chemical Engineering · Biochemistry · Self-hosting</p>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- INTERESTS SECTION                          -->
+        <!-- EDIT: Change titles, emojis, and           -->
+        <!-- descriptions. Add/remove .card divs.       -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="section">
+            <h2>Interests</h2>
+
+            <!-- EDIT: Card 1 -->
+            <div class="card">
+                <h3>🧪 Chemical Engineering</h3>
+                <p>How processes scale from a beaker to a plant. Reaction kinetics, thermodynamics, and the weird stuff that happens when you try to make molecules do what you want at industrial scale.</p>
+            </div>
+
+            <!-- EDIT: Card 2 -->
+            <div class="card">
+                <h3>🧬 Biochemistry &amp; Genetics</h3>
+                <p>How your body is basically a chemical plant running 24/7. Enzymes as catalysts, DNA as the recipe book, metabolic pathways as assembly lines. Why a single base change can break the whole line.</p>
+            </div>
+
+            <!-- EDIT: Card 3 -->
+            <div class="card">
+                <h3>🖥️ Self-Hosting</h3>
+                <p>Running a Coolify + Tailscale stack on my laptop. Deploying random GitHub repos, monitoring them, and learning what actually happens between "I clicked deploy" and "it's live."</p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- CURRENTLY SECTION                          -->
+        <!-- EDIT: What you're working on right now     -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="section">
+            <h2>Currently</h2>
+            <div class="card">
+                <p>Building a home lab for reaction monitoring · Reading about CRISPR · Figuring out why my containers keep OOMing</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- STACK / TOOLS SECTION                      -->
+        <!-- EDIT: Add or remove .badge spans           -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="section">
+            <h2>Stack</h2>
+            <span class="badge">Python</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Coolify</span>
+            <span class="badge">Tailscale</span>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LINKS SECTION                              -->
+        <!-- EDIT: Change hrefs to your actual profiles -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="section links">
+            <h2>Links</h2>
+            <!-- EDIT: Your GitHub URL -->
+            <a href="https://github.com/YOUR_USERNAME">GitHub</a>
+            <!-- EDIT: Your Discord or other link -->
+            <a href="#">Discord</a>
+        </div>
+
+    </div>
+</body>
+</html>   
